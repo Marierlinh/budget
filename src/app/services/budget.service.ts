@@ -4,6 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BudgetService {
+  budget:number;
+  restant: number;
 
-  constructor() { }
+  constructor() { 
+    this.budget = 0
+    this.restant = 0
+  }
 }
