@@ -19,4 +19,12 @@ export class IndiquerBudgetComponent implements OnInit {
 
   }
 
+  ajouter() {
+    if(this.montant > 0) {
+      this.montantMauvais = false;
+    }else {
+      this.montantMauvais = true;
+    }
+  }
+
 }
