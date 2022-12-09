@@ -1,12 +1,17 @@
 <h4 class="text-center">Saisir votre dépenses</h4>
 <hr>
+<div *ngIf="formeIncorrecte" class="text-center">
+    <span class="badge bg-danger textErreur">{{textIncorrecte|uppercase}}</span>
+</div>
 <div class="form-group mb-4">
     <label for="depenses">Dépenses</label>
-    <input type="text" id="depense" class="form-control form-control-lg" placeholder="Ex: nourriture..">
+    <input type="text" id="depense" [(ngModel)]="nomDepense"
+            class="form-control form-control-lg" placeholder="Ex: nourriture..">
 </div>
 <div class="form-group mb-4">
     <label for="montant">Montant</label>
-    <input type="number" id="montant" class="form-control form-control-lg" placeholder="Saisir montant...">
+    <input type="number" id="montant" [(ngModel)]="montant"
+            class="form-control form-control-lg" placeholder="Saisir montant...">
 </div>
 
-<button class="btn btn-secondary btn-lg btn-block mt-2">AJOUTER DÉPENSES</button>
+<button class="btn btn-secondary btn-lg btn-block mt-2" (click)="ajouterDepenses()">AJOUTER DÉPENSES</button>
